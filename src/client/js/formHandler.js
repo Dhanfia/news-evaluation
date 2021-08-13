@@ -7,7 +7,7 @@ const handleSubmit = (event)  => {
         const results = document.getElementById('results');
         results.classList.add('show');
         document.getElementById('header').innerHTML = 'Evaluating url...';        
-        fetch('/processLanguage', {
+        fetch('http://localhost:8081/processLanguage', {
             method: 'POST',
             credentials: 'same-origin',
             headers: { 'Content-Type': 'application/json' },

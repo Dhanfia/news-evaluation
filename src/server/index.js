@@ -3,6 +3,7 @@ const fetch = require('node-fetch')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -10,6 +11,7 @@ dotenv.config();
 const app = express()
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
 app.use(express.static('dist'))
 
 
