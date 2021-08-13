@@ -6,7 +6,7 @@ const handleSubmit = (event)  => {
         const data = { url };
         const results = document.getElementById('results');
         results.classList.add('show');
-        document.getElementById('header').innerHTML = '<p>Processing url...</p>';        
+        document.getElementById('header').innerHTML = 'Evaluating url...';        
         fetch('/processLanguage', {
             method: 'POST',
             credentials: 'same-origin',
