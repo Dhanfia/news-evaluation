@@ -1,0 +1,32 @@
+form {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 80px;
+    background-color: #f2f2f2;
+    margin: 60px 0;
+}
+
+input {
+    padding:6px 20px;
+    width: 100%;
+    height: 40px;
+    line-height: 16px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    background-color: rgb(40, 142, 238);
+    color: #fff;
+    font-size: 16px;
+}
+
+#results {
+    &.show {
+        display: block;
+    }
+    text-align: center;
+    display: none;
+}

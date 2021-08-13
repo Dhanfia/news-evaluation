@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate news</title>
+    </head>
+
+    <body>
+        <h1>Evaluate news</h1>
+        <main>
+            <section>
+                <form onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="text" name="input" value="" placeholder="Enter a valid url">
+                    <input type="submit" name="" value="Analyze my url" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            <section>
+
+            <section id="results">
+                <h2 id="header" class="header"></h2>
+                <p id="subjectivity"></p>
+                <p id="agreement"></p>
+                <p id="confidence"></p>
+                <p id="irony"></p>
+            </section>
+        </main>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                    .then(reg => console.log("Service Worker: Registered!"))
+                    .catch(err => console.log("Error ===> ", err))
+                });
+            }
+           </script>
+    </body>
+
+</html>
