@@ -1,7 +1,6 @@
 const handleSubmit = (event)  => {
     event.preventDefault();
     const url = document.getElementById('url').value;  
-    const results = document.getElementById('results');
     console.log(url);
     if(Client.checkForUrl(url)) {
         const data = { url };
@@ -14,9 +13,9 @@ const handleSubmit = (event)  => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })
-        .then(response => response.json())
-        .then(response => updateUI(response))    
-        .catch(error => console.log('error', error));
+        .then(res => res.json())
+        .then(res => updateUI(res))    
+        .catch(error => console.log('Error: ', error));
     } else {
         alert ("Please enter a valid url");
     }

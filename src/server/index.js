@@ -29,8 +29,8 @@ app.post('/processLanguage', (req, res) => {
     const key = process.env.API_KEY;
     const url = req.body.url;
     console.log(key, url);
-    fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${key}&url=${url}&lang=en`, { method: 'POST' })
-        .then(response => response.json())
+    fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${key}&url=${url}&lang=en`)
+        .then(res => res.json())
         .then(data => res.send(data))
-        .catch(error => console.log('error', error));
+        .catch(error => console.log(error));
 });
