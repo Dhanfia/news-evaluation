@@ -1,7 +1,7 @@
 # Evaluate news
 
-The goal of this project is to give you practice with:
-- Setting up Webpack
+The goal of this news evaluation project is to 
+- Set up Webpack
 - Sass styles
 - Webpack Loaders and Plugins
 - Creating layouts and page design
